@@ -1,0 +1,54 @@
+/* Add application styles & imports to this file! */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.title-header {
+
+  background-image: url('/assets/finance.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height: 15vw;
+}
+
+.rounded{
+  border-radius:10px;
+}
+
+.calculator-body {
+
+}
+
+.calculator-primary-header {
+  	background-color: #B8860B;
+  	color:white;
+}
+
+.calculator-primary-component {
+
+}
+
+.calculator-secondary-header {
+  	background-color: #DAA520;
+  	color:white;
+}
+
+.calculator-footer {
+  	background-color: #DCDCDC;
+  	color:white;
+}
+
+.calculator-secondary-component {
+}
+
+.calculator-form-row {
+  background-color: #FFF8DC;
+  color: black;
+}
+
+.calculator-label {
+
+}
+.calculator-input {
+
+}

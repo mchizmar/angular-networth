@@ -1,0 +1,20 @@
+<div class="container mt-1">
+
+  <div class="text-white  title-header ">
+   <h1>{{title}}</h1>
+  </div>
+
+  <div class="calculator-body" >
+    <nw-asset (assetsTotalUpdate)="updateAssetsTotal($event)"></nw-asset>
+  </div>
+
+  <div class="calculator-body" >
+    <nw-liabilities (liabilitiesTotalUpdate)="updateLiabilitiesTotal($event)"></nw-liabilities>
+  </div>
+
+  <div class="row justify-content-end calculator-footer  rounded  mt-1">
+    <h1>Total Net Worth: $ {{totalNetworth.toFixed(2)}}</h1>
+  </div>
+
+</div>
+

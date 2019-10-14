@@ -1,0 +1,18 @@
+
+<div class="container calculator-primary-component m-1">
+
+  <section class="row  calculator-primary-header  rounded  mt-1">
+    <h2>{{title}}</h2>
+  </section>
+
+  <div class="row mt-1">
+    <div class="col-md">
+      <nw-current (currentTotalUpdate)="updateCurrentTotal($event)"></nw-current>
+    </div>
+  </div>
+
+  <div class="row justify-content-end  calculator-footer rounded  mt-1">
+    <h3>Total Liabilities: $ {{total.toFixed(2)}}</h3>
+  </div>
+
+</div>

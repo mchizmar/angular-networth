@@ -1,0 +1,71 @@
+<div class="container">
+
+  <section class="row calculator-secondary-header rounded">
+    <h3> {{title}}</h3>
+  </section>
+
+  <form [formGroup]="useAssetsFormGroup" (input)='onValueChangeEvent($event)'>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Principle home</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="principleHome">
+      </div>
+    </div>
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Vacation home</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="vacationHome">
+      </div>
+    </div>
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Cars, trucks, boats</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="motors">
+      </div>
+    </div>
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Home furnishings</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="homeFurnishings">
+      </div>
+    </div>
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Art, antiques, coins, collectibles</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="collectibles">
+      </div>
+    </div>
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Jewelry, furs</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="jewelry">
+      </div>
+    </div>
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Other</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="other">
+      </div>
+    </div>
+  </form>
+
+  <section class="row  justify-content-end  calculator-footer  rounded">
+    <h4>Total Use Assets: $ {{total.toFixed(2)}}</h4>
+  </section>
+
+</div>

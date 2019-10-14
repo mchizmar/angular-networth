@@ -1,0 +1,68 @@
+<div class="container">
+
+  <section class="row calculator-secondary-header rounded">
+    <h3> {{title}}</h3>
+  </section>
+
+  <form [formGroup]="cashFormGroup" (input)='onValueChangeEvent($event)'>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Checking accounts</label>
+      </div>
+      <div class="col">
+        $<input class="" type="text" formControlName="checking">
+      </div>
+    </div>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Savings accounts</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="savings">
+      </div>
+    </div>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Money market accounts</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="moneymarket">
+      </div>
+    </div>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Savings bonds</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="bonds">
+      </div>
+    </div>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> CD's</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="cd">
+      </div>
+    </div>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Life Insurance</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="lifeinsurance">
+      </div>
+    </div>
+  </form>
+
+  <section class="row  justify-content-end  calculator-footer  rounded">
+    <h4>Total Cash: $ {{total.toFixed(2)}}</h4>
+  </section>
+
+</div>

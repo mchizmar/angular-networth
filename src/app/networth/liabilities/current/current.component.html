@@ -1,0 +1,105 @@
+<div class="container">
+
+  <section class="row calculator-secondary-header rounded">
+    <h3> {{title}}</h3>
+  </section>
+
+  <form [formGroup]="currentFormGroup" (input)='onValueChangeEvent($event)'>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Credit Card Balances</label>
+      </div>
+      <div class="col">
+        $<input class="" type="text" formControlName="creditCardBalance">
+      </div>
+    </div>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Estimated income tax owed</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="estimatedIncomeTax">
+      </div>
+    </div>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label> Other outstanding bills</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="otherBills">
+      </div>
+    </div>
+
+    <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Home mortgage</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="homeMortgage">
+      </div>
+    </div>
+
+   <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Home equity loan</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="homeEquityLoan">
+      </div>
+    </div>
+
+  <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Rental mortgage</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="rentalMortgage">
+      </div>
+    </div>
+
+  <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Car Loans</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="carLoans">
+      </div>
+    </div>
+
+  <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Student Loans</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="studentLoans">
+      </div>
+    </div>
+
+   <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Life insurance policy plans</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="lifeInsurance">
+      </div>
+    </div>
+
+   <div class="row  calculator-form-row">
+      <div class="col">
+        <label>Other long-term debt</label>
+      </div>
+      <div class="col">
+        $<input type="text" formControlName="otherLongTerm">
+      </div>
+    </div>
+
+  </form>
+
+  <section class="row  justify-content-end  calculator-footer  rounded">
+    <h4>Total Current Liabilities: $ {{total.toFixed(2)}}</h4>
+  </section>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="container calculator-primary-component m-1">
+
+  <section class="row  calculator-primary-header  rounded  mt-1">
+    <h2>{{title}}</h2>
+  </section>
+
+  <div class="row mt-1">
+    <div class="col-md">
+      <nw-cash (cashTotalUpdate)="updateCashTotal($event)"></nw-cash>
+    </div>
+  </div>
+
+  <div class="row mt-1">
+    <div class="col-md">
+      <nw-useasset (useAssetsTotalUpdate)="updateUseAssetsTotal($event)"></nw-useasset>
+    </div>
+  </div>
+
+  <div class="row mt-1">
+    <div class="col-md">
+      <nw-investments (investmentsTotalUpdate)="updateInvestmentsTotal($event)"></nw-investments>
+    </div>
+  </div>
+
+  <div class="row justify-content-end calculator-footer  rounded  mt-1">
+    <h3>Total Assets: $ {{total.toFixed(2)}}</h3>
+  </div>
+
+</div>

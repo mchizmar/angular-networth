@@ -1,0 +1,185 @@
+
+<div class="container">
+
+  <section class="row calculator-secondary-header rounded">
+    <h3> {{title}}</h3>
+  </section>
+
+  <form [formGroup]="investmentsFormGroup" (input)='onValueChangeEvent($event)'>
+
+    <div formGroupName="taxableAccounts">
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <h3> Taxable Accounts </h3>
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Brokerage</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="brokerage">
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Other_____</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="otherBrokerage">
+        </div>
+      </div>
+
+    </div><!-- END TAXABLE-->
+
+    <div formGroupName='retirementAccounts'>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <h4> Retirement Accounts </h4>
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> IRA</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="ira">
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Roth IRA</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="rothIra">
+        </div>
+      </div>
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> 401(k) or 403(b)</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="work401Or403">
+        </div>
+      </div>
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> SEP-IRA</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="sepIra">
+        </div>
+      </div>
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Keogh or other qualified plans</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="otherPlans">
+        </div>
+      </div>
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Pension (vested benefit)</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="pension">
+        </div>
+      </div>
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Annuity (accumulated value)</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="annuity">
+        </div>
+      </div>
+    </div><!-- END RETIREMENTS-->
+
+
+    <div formGroupName="businessOwnership">
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <h3>  Business ownership interests </h3>
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Real estate (rental property or land)</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="realEstate">
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label>Sole proprietorship</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="soleProprietorship">
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Partnership</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="partnership">
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> C Corporation</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="cCorporation">
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> S Corporation</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="sCorporation">
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Limited Liability Company</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="llc">
+        </div>
+      </div>
+
+      <div class="row  calculator-form-row">
+        <div class="col">
+          <label> Other:___</label>
+        </div>
+        <div class="col">
+          $<input type="text" formControlName="otherBusiness">
+        </div>
+      </div>
+
+    </div>
+
+  </form>
+
+  <section class="row  justify-content-end  calculator-footer  rounded">
+    <h4>Total Investments: $ {{total.toFixed(2)}}</h4>
+  </section>
+
+</div>
